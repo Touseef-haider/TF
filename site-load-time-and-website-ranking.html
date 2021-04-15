@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Site Load Time and Website Ranking</title>
+	<!-- Favicon -->
+    <link rel="shortcut icon" href="images/faviconntf.webp" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/et-line-icons.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/animated-headline.css"/>
+	<link rel="stylesheet" href="css/lity.min.css"/>
+    <link rel="stylesheet" href="css/lightbox.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/green-style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7cOpen+Sans:300,400,600,700,800" rel="stylesheet">
+  </head>
+
+  <style>
+	#services-section{
+			position: absolute;
+			top: 80px;
+			background-color: white;
+			display: none;
+			border-radius: 5px;
+		}
+		#services-section ul li:hover{
+			border-bottom: solid 1px grey;
+			padding-right: 30px;
+		}
+		#services-section ul li{
+			padding-right: 30px;
+		}
+	/* START (SIDE) */
+	.services-sect{
+		background-color: white;
+		text-align: left;
+
+	}
+	.services-sect ul{
+		padding: 0;
+	}
+	.services-sect ul li{
+		list-style-type: none;
+		margin:10px 20px;
+	}
+	.services-sect ul li a{
+		color: #16c885;
+		text-decoration:none;
+		padding: 0;
+		margin: 0;
+	}
+
+	/* END (SIDE) */
+
+	/* START (MOBILE) */
+	.services-sectM{
+		text-align: center;
+		background-color:#16c885;
+	}
+	.services-sectM ul{
+		padding: 0;
+	}
+	.services-sectM ul li{
+		list-style-type: none;
+		margin:10px 20px;
+	}
+	.services-sectM ul li a{
+		color:white;
+		text-decoration:none;
+		padding: 0;
+		margin: 0;
+	}
+
+	/* END (MOBILE) */
+	/* 
+	a:active{
+		border-bottom: 3px solid;
+		transition: border 1s;
+	} */
+	#services-section ul{
+		padding: 0;
+	}
+	#services-section ul li{
+		list-style-type: none;
+		margin:10px 20px;
+	}
+	#services-section ul li a{
+		color: #16c885;
+		text-decoration:none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	html{
+		scroll-behavior: smooth;
+	}
+	tab.active + img{
+		color: white;
+	}	
+	.outer-show{
+		width: 50px;
+		z-index: 999;
+		height: 180px;
+		cursor: pointer;
+		box-shadow: -20px 7px 18px -7px rgba(87, 184, 151, 0.09);
+		border-radius: 0 10px 10px 0;
+		display: inline-block;
+		padding-top: 0;
+		vertical-align: top;
+		/* margin-top: 120px; */
+		position: fixed;
+		text-transform: uppercase;
+		/* background: linear-gradient(to right,magenta, #008080); */
+		background-color: #16c885;
+		left: 0px;
+		right: auto;
+		top: 40%;
+	}
+
+	.outer-show p {
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+		position: absolute;
+		display: block;
+		transform: rotate(-90deg);
+		-webkit-transition: 0.4s;
+		-moz-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+		left: -38px;
+		text-transform: capitalize;
+		white-space: pre;
+		bottom: 75px;
+	}
+	.divToShow{
+		z-index: 2;
+		display: none;		
+		height: 400px;	
+		transition: height 3s;
+		animation: grow0 0.5s forwards;
+	}
+	.openDiv{
+		position: fixed;
+		top: 30%;
+		transition: left  3s ease;
+	}
+	.close-icon{
+		display: none;
+	}
+	
+	@media (min-width: 991px){
+		.serviceM{
+			display: none;
+		}
+	}
+
+	@keyframes grow0 {
+		from {
+			width: 0px;
+		}
+		to {
+			width: 400px;
+		}
+	}
+	@keyframes grow1 {
+		from {
+			width: 0px;
+		}
+		to {
+			width: 250px;
+		}
+	}
+	@media (max-width: 500px){
+		.logo-lower{
+			margin-top: 60px;
+		}
+	}
+
+	@media (max-width: 991px){
+		.serviceM{
+			display: block !important;
+			cursor: pointer;
+		}
+		.serviceD{
+			display: none;
+		}
+	}
+
+	@media(max-width: 400px){
+		
+		.divToShow{
+			display: none;
+		}
+		.outer-show{
+			display: none;
+		}
+	}
+	.btn-3{
+		display: none;
+	}
+	.bg-image{
+		
+		position: relative;
+		height: 600px;
+		background-image: url('./images/services/service-image.webp');
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-color: rgba(0,0,0,0.8);
+		/* background-blend-mode: overlay; */
+		text-align: center;
+		overflow: hidden;
+		-webkit-clip-path: none;
+		clip-path: none;
+	}
+
+	
+</style>
+
+
+<body>
+	  <!-- ==================================================
+							load-wrapp
+      ================================================== -->
+	  <div class="load-wrapp">
+		  <div class="wrap">
+			  <ul class="dots-box">
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			  </ul>
+		  </div>
+      </div> 
+	  <!-- ==================================================
+							End load-wrapp
+      ================================================== -->
+	    
+	  <!-- ==================================================
+							navbar
+      ================================================== -->
+	  <nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand color-fff color-red-hvr fs-25 fw-600 mr-auto ml-auto" href="./index.html">
+				<img src="./images/Trulyfuture-logo-dark.webp"  id="logo-scrl"  class="logo-scroll" alt="log">
+				<img src="./images/Trulyfuture-logo-light.webp" id="logo-main" class="logo-scroll" alt="log">
+				<span class="bg-red d-inline-block radius-50"></span> 
+			</a>
+			<div class="bars z-index-1" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="first d-block bg-fff mb-6px transition-5"></span>
+				<span class="second d-block bg-fff mb-6px transition-5"></span>
+				<span class="third d-block bg-fff mb-6px transition-5"></span>
+			</div>
+			<div class="collapse navbar-collapse" id="main-navbar">
+				<ul class="navbar-nav ml-auto">  
+					<li class="nav-item">
+						<a class="nav-link" href="./index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./about.html" >About</a>
+					</li>
+					<li class="nav-item">
+						<!-- <a class="nav-link" href="#" data-scroll-nav="20">About</a> -->
+					</li>
+
+					<!-- for desktop view (START) -->
+					<li class="nav-item serviceD main-service" >
+						<a class="nav-link "   href="#" data-scroll-nav="3">Services</a>
+					</li>
+					<div  id="services-section">
+						<ul>
+							<li>
+								<a href="./logo-design.html" >Logo Design</a>
+							</li>
+							<li>
+								<a href="./web-development.html">Web Development</a>
+							</li>
+							<li>
+								<a href="./seo.html"> SEO </a>
+							</li>
+							<li>
+								<a href="./digitalmarketing.html">Digital Marketing</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- for desktop view (END) -->
+
+					<!-- Start of mobile + views -->
+					<li class="nav-item serviceM">
+						<span class="nav-link" data-toggle="collapse" data-target="#mycollapseM" >Services</span>
+					 </li>
+					  <div class="collapse services-sectM" id="mycollapseM">
+						  <ul>
+							  <li>
+								  <a href="./logo-design.html" >Logo Design</a>
+							  </li>
+							  <li>
+								  <a href="./web-development.html">Web Development</a>
+							  </li>
+							  <li>
+								  <a href="./seo.html"> SEO </a>
+							  </li>
+							  <li>
+								  <a href="./digitalmarketing.html">Digital Marketing</a>
+							  </li>
+						  </ul>
+					  </div>
+
+					<!-- End of mobile + views -->
+
+					<li class="nav-item">
+						<a class="nav-link" href="./index.html#work" >Work</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./blogs.html" >Blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./contact.html" >Contact</a>
+					</li>
+				</ul>
+				<ul class="mb-0px pl-30px icons-list">  
+					<li class="d-inline-block mr-10px">
+						<a class="color-fff color-red-hvr" target="_blank" href="https://www.facebook.com/trulyfuture"><i class="fa fa-facebook"></i> </a>
+					</li>
+					<li class="d-inline-block mr-10px">
+						<a class="color-fff color-red-hvr" target="_blank" href="https://www.instagram.com/truly.future/"><i class="fa fa-instagram"></i> </a>
+					</li>
+					<li class="d-inline-block mr-10px">
+						<a class="color-fff color-red-hvr" target="_blank" href="https://pk.linkedin.com/company/2-minut-networks"><i class="fa fa-linkedin"></i> </a>
+					</li>
+				</ul>
+				<ul class="mb-0px pl-30px bars-list">  
+					<li class="d-inline-block mr-10px">
+						<a class="bars-2" href="#">
+						  <span class="bar d-block bg-fff first mb-6px"></span>
+						  <span class="bar d-block bg-fff second mb-6px"></span>
+						  <span class="bar d-block bg-fff third"></span>
+					  </a>
+					</li>
+				</ul>
+			</div>
+			<div class="sidebar-box flex-center text-center pr-30px pl-30px transition-5">
+				<div class="close-menu p-absolute">
+					<span class="bar d-block bg-fff first mb-6px"></span>
+					<span class="bar d-block bg-fff second mb-6px"></span>
+				</div>
+				<div>
+					<img src="./images/Trulyfuture-logo-dark.webp" alt="Truly Future">
+
+					<span class="color-eee fs-15 d-block mt-20px mb-10px">Creative agency & digital marketing services</span>
+					<ul class="sidebar-list list-unstyled pl-0px">
+						<li class="mb-20px">
+						  <a class="color-fff color-fff-hvr" href="./index.html" data-scroll-nav="1">Home</a>
+						</li>
+						<li class="mb-20px">
+						  <a class="color-fff color-fff-hvr" href="./about.html">About</a>
+						</li>
+						<li class="mb-20px">
+						  <a class="color-fff color-fff-hvr" href="#" data-toggle="collapse" data-target="#mycollapse" >
+							  Services 
+						  </a>
+						</li>
+						<div class="collapse services-sect" id="mycollapse">
+							<ul>
+								<li>
+									<a href="./logo-design.html" >Logo Design</a>
+								</li>
+								<li>
+									<a href="./web-development.html">Web Development</a>
+								</li>
+								<li>
+									<a href="./seo.html"> SEO </a>
+								</li>
+								<li>
+									<a href="./digitalmarketing.html">Digital Marketing</a>
+								</li>
+							</ul>
+						</div>
+						<li class="mb-20px">
+						  <a class="color-fff color-fff-hvr" href="./index.html#work" >Work</a>
+						</li>
+						<li class="mb-20px">
+						  <a class="color-fff color-fff-hvr" href="./blogs.html">Blog</a>
+						</li>
+						<li>
+						  <a class="color-fff color-fff-hvr" href="./contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<div class="icons p-absolute">  
+					  <a class="color-fff color-red-hvr" target="_blank" href="https://www.facebook.com/trulyfuture"><i class="fa fa-facebook"></i> </a>
+					  <a class="color-fff color-red-hvr" target="_blank" href="https://www.instagram.com/truly.future/"><i class="fa fa-instagram"></i> </a>
+					  <a class="color-fff color-red-hvr" target="_blank" href="https://pk.linkedin.com/company/2-minut-networks"><i class="fa fa-linkedin"></i> </a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	  <!-- ==================================================
+							End navbar
+      ================================================== -->
+
+	  
+	  <!-- ==================================================
+							blog-intro
+      ================================================== -->
+	  
+	  <section class="bg-image d-flex justify-content-center align-items-center text-center" data-scroll-index="1">
+		  
+		<div class="flex-center med-padding">
+			<div class="container ">
+				<div class="welcome-text logo-lower">
+					<!-- <span class="color-ccc fw-200 fs-25 mt-5"><strong></strong> </span> -->
+					<h1 class="mt-20px mb-20px color-fff fw-500">The proportionality of Server Load Time and Website Rankings.</h1>
+					<span class="circle-1 p-absolute bg-red radius-3px"></span>
+					<p class="color-fff font-size-4">
+					  Site Load Time and Website Ranking
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	  <!-- ==================================================
+							End blog-intro
+      ================================================== -->
+		
+	  
+		<!-- Touseeef's Code -->
+
+
+
+		<!-- here i am going to write a code for call to actions buuttons -->
+		<div class=" divToShow card  bg-light ">
+			<form class="form p-3"  id="contact-form" method="post" action="form.php">
+				<div class="messages"></div>
+				<div class="controls mt-3">
+					<div class="row"> 
+						<div class="col-md-12">
+							<div class="form-group">
+								<input id="form_name" class="form-control" type="text" name="name" placeholder="Name"  required="required" data-error="Name is required.">
+								<div class="help-block with-errors color-red"></div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input id="form_email" class="form-control" type="email" name="email" placeholder="Email" required="required" data-error="email is required.">
+							<div class="help-block with-errors color-red"></div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input id="form_subject" class="form-control" type="number" name="number" placeholder="Number">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea id="form_message" class="form-control" name="message" placeholder="Message" rows="6" required="required" data-error="Message."></textarea>
+								<div class="help-block with-errors color-red"></div>
+							</div>
+						</div>
+						<div class="col-md-12 d-flex justify-content-between">							
+							<button role="button" name="submit" class="main-btn btn-3">Send Message </button>
+							<div onclick="closeForm()" style="cursor: pointer;">
+								<i class="fa fa-arrow-left color-red mt-3 mr-3 close-icon"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form> 		
+		</div>
+
+		<div class="outer-show" onclick="myFun()" >
+			<p>Let's Get Started</p>
+		  </div>
+		</div>
+		
+
+
+	<!-- Touseeef's Code  -->
+
+
+	  <!-- ==================================================
+							blog-details
+      ================================================== -->
+	  <section class="blog-details sec-padding">
+		  <div class="container">
+			  <div class="row">
+				  <div class="col-md-8">
+					  <div class="mt-25px mb-25px">
+						  <img alt="img" src="./images/blogs/blog2.webp" class="w-100">
+						  <p class="mt-20px">
+							  <span class="mr-10px"><i class="fa fa-user color-red"></i> By Admin</span>
+							  <span class="mr-10px"><i class="fa fa-clock-o color-red"></i>  13 March, 2021</span>
+							  <span class="mr-10px"><i class="fa fa-comments-o color-red"></i> 2 Comments</span>
+							  <span><i class="fa fa-tag color-red"></i> <a href="#0" class="color-333 color-red-hvr">Technologhy</a>, <a href="#0" class="color-333 color-red-hvr">Design</a></span>
+						  </p>
+						  <h4 class="mt-15px mb-15px">Every brand and business wants the maximum number of traffic and leads, but there are some factors which will never allow you to rank.</h4>
+						  <p class="mb-15px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						  <p class="mb-15px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining</p>
+						  <span class="fs-18 fw-600 d-block mb-15px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</span>
+						  <blockquote class="bg-f6f6f6 p-15px mb-15px"><i class="fa fa-quote-left color-red mr-10px"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</blockquote>
+						  <p class="mb-15px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining</p>
+						  <ul class="pl-15px mb-30px">
+							  <li class="mb-10px fw-500">Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+							  <li class="mb-10px fw-500">Lorem Ipsum is simply dummy text of the printing </li>
+							  <li class="mb-10px fw-500">Duis aute irure dolor in reprehenderit </li>
+							  <li class="mb-10px fw-500">quis nostrum exercitationem ullam corporis suscipit </li>
+							  <li class="fw-500">Lorem Ipsum is simply dummy text of the printing </li>
+						  </ul>
+						  <a href="#0"><span class="d-inline-block color-red color-fff-hvr  bg-f6f6f6 bg-red-hvr mr-10px mb-10px pr-15px pl-15px pt-5px pb-5px radius-5px transition-2"># Moblie</span></a>
+						  <a href="#0"><span class="d-inline-block color-red color-fff-hvr  bg-f6f6f6 bg-red-hvr mr-10px mb-10px pr-15px pl-15px pt-5px pb-5px radius-5px transition-2"># Work</span></a>
+						  <a href="#0"><span class="d-inline-block color-red color-fff-hvr  bg-f6f6f6 bg-red-hvr pr-15px pl-15px pt-5px pb-5px radius-5px transition-2"># Marketing</span></a>
+						  <h5 class="mb-0px mt-20px social-share">
+							  <span class="d-inline-block mr-10px">Share: </span>
+							  <a href="https://www.facebook.com/trulyfuture" class="fs-16 text-center color-fff bg-red color-fff-hvr bg-333-hvr d-inline-block mr-10px radius-50"><i class="fa fa-facebook"></i> </a>
+							  <a href="https://pk.linkedin.com/company/2-minut-networks" class="fs-16 text-center color-fff bg-red color-fff-hvr bg-333-hvr d-inline-block mr-10px radius-50"><i class="fa fa-linkedin"></i> </a>
+							  <a href="https://www.instagram.com/truly.future/" class="fs-16 text-center color-fff bg-red color-fff-hvr bg-333-hvr d-inline-block radius-50"><i class="fa fa-instagram"></i> </a>
+						  </h5>
+						  <!-- ================================================== -->
+						  <hr class="mt-50px mb-50px">
+						  <!-- ================================================== -->
+
+						  <h4 class="mb-30px">2 Comments</h4>
+						  <div class="comment-box radius-5px p-15px pt-50px pb-50px mb-20px p-relative">
+							  <img alt="img" src="http://via.placeholder.com/300x300" class="radius-50 p-absolute">
+							  <a href="#0" class="reply-button d-inline-block float-right color-fff bg-red color-fff-hvr bg-333-hvr mb-10px pr-15px pl-15px pt-5px pb-5px radius-50px transition-2">Reply <i class="fa fa-share fs-14"></i> </a>
+							  <div class="pl-95px">
+								  <h5 class="mb-0px">John Charles</h5>
+								  <span class="fs-15 color-aaa"><i class="fa fa-clock-o"></i> 12 June, 2018</span>
+								  <p class="mt-20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make</p>
+							  </div>
+						  </div>
+						  <div class="comment-box radius-5px p-15px pt-50px pb-50px p-relative">
+							  <img alt="img" src="http://via.placeholder.com/300x300" class="radius-50 p-absolute">
+							  <a href="#0" class="reply-button d-inline-block float-right color-fff bg-red color-fff-hvr bg-333-hvr mb-10px pr-15px pl-15px pt-5px pb-5px radius-50px transition-2">Reply <i class="fa fa-share fs-14"></i> </a>
+							  <div class="pl-95px">
+								  <h5 class="mb-0px">Robert Richard</h5>
+								  <span class="fs-15 color-aaa"><i class="fa fa-clock-o"></i> 12 June, 2018</span>
+								  <p class="mt-20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make</p>
+							  </div>
+						  </div>
+						  <!-- ================================================== -->
+						  <hr class="mt-50px mb-50px">
+						  <!-- ================================================== -->
+						  <h4 class="mb-30px">Leave a Comment</h4>
+						  <form id="comment-form" class="mt-30px">
+							  <div class="row">
+								  <div class="col-md-6">
+									  <div class="form-group p-relative">
+										  <input type="text" placeholder="Your Name" required class="d-block w-100">
+										  <i class="fa fa-user fs-20 color-red p-absolute"></i> 
+									  </div>
+								  </div>
+								  <div class="col-md-6">
+									  <div class="form-group p-relative">
+										  <input type="email" placeholder="Your Email" required class="d-block w-100">
+										  <i class="fa fa-envelope fs-20 color-red p-absolute"></i> 
+									  </div>
+								  </div>
+							  </div>
+							  <div class="form-group p-relative">
+								  <textarea placeholder="your comment" class="d-block w-100 pt-15px" required></textarea>
+								  <i class="fa fa-comments-o fs-20 color-red p-absolute"></i> 
+							  </div>
+							  <button role="button" class="main-btn btn-3">Post Comment </button>
+						  </form>
+					  </div>
+				  </div>
+				  <div class="col-md-4">
+					<div class="mt-25px mb-25px">
+						<!-- <form id="search-form" class="mb-50px">
+							<div class="form-group p-relative">
+								<input type="text" placeholder="Search ...." required class="d-block w-100 radius-0px">
+								<button role="search" class="p-absolute d-inline-block"><i class="fa fa-search fs-20 color-red"></i> </button>
+							</div>
+						</form> -->
+						<!-- <h4 class="mb-20px">Categories</h4>
+						<ul class="categories-list list-unstyled font-Poppins mb-50px">
+							<li class="pb-10px mb-10px">
+								<a href="#0" class="color-666 color-red-hvr">Technology</a>
+								<span class="text-center float-right radius-50 color-red">3</span>
+							</li>
+							<li class="pb-10px mb-10px">
+								<a href="#0" class="color-666 color-red-hvr">Design</a>
+								<span class="text-center float-right radius-50 color-red">4</span>
+							</li>
+							<li class="pb-10px mb-10px">
+								<a href="#0" class="color-666 color-red-hvr">Web</a>
+								<span class="text-center float-right radius-50 color-red">8</span>
+							</li>
+							<li class="pb-10px mb-10px">
+								<a href="#0" class="color-666 color-red-hvr">Development</a>
+								<span class="text-center float-right radius-50 color-red">2</span>
+							</li>
+						</ul> -->
+						<h4 class="mb-20px">Tags</h4>
+						<a href="#0"><span class="d-inline-block color-red color-fff-hvr  bg-f6f6f6 bg-red-hvr mr-10px mb-10px pr-15px pl-15px pt-5px pb-5px radius-5px transition-2"># Moblie</span></a>
+						<a href="#0"><span class="d-inline-block color-red color-fff-hvr  bg-f6f6f6 bg-red-hvr mr-10px mb-10px pr-15px pl-15px pt-5px pb-5px radius-5px transition-2"># Work</span></a>
+						<a href="#0"><span class="d-inline-block color-red color-fff-hvr  bg-f6f6f6 bg-red-hvr mr-10px mb-10px pr-15px pl-15px pt-5px pb-5px radius-5px transition-2"># Computer</span></a>
+						<a href="#0"><span class="d-inline-block color-red color-fff-hvr  bg-f6f6f6 bg-red-hvr mr-10px mb-10px pr-15px pl-15px pt-5px pb-5px radius-5px transition-2"># Branding</span></a>
+						<a href="#0"><span class="d-inline-block color-red color-fff-hvr  bg-f6f6f6 bg-red-hvr pr-15px pl-15px pt-5px pb-5px radius-5px transition-2"># Marketing</span></a>
+						<h4 class="mb-20px mt-50px">Popular Posts</h4>
+						<div class="row mb-20px">
+							<div class="col-md-4 mb-15px">
+								<img alt="img" src="./images/blogs/blog1.webp">
+							</div>
+							<div class="col-md-8">
+								<h5 class="mb-7px"><a class="color-333 color-red-hvr" href="./covid-impact.html">
+									<!-- The best creativity is the result of good work habits -->
+									How much impact did the lockdown bring in corporate environment?
+								  </a> </h5>
+								<p><i class="fa fa-clock-o color-red"></i> 15 May, 2018</p>
+							</div>
+						</div>
+						<div class="row mb-20px">
+							<div class="col-md-4 mb-15px">
+								<img alt="img" src="./images/blogs/blog3.webp">
+							</div>
+							<div class="col-md-8">
+								<h5 class="mb-7px"><a class="color-333 color-red-hvr" href="./site-load-time-and-website-ranking.html">
+									<!-- Each of us has our own work to do, our own path to walk -->
+									The proportionality of Server Load Time and Website Rankings.
+								  </a> </h5>
+								<p><i class="fa fa-clock-o color-red"></i> 15 May, 2018</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 mb-15px">
+								<img alt="img" src="./images/blogs/blog4.webp">
+							</div>
+							<div class="col-md-8">
+								<h5 class="mb-7px"><a class="color-333 color-red-hvr" href="./past-present-future.html">
+									<!-- Digital without data might as well not be digital -->
+									The previous century, current year, and future decade!!!.
+								  </a> </h5>
+								<p><i class="fa fa-clock-o color-red"></i> 15 May, 2018</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+							End blog-details
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							footer-area
+      ================================================== -->
+	  <section class="footer-area"  >
+		<div class="overlay-bg-90 sec-padding"> 
+			<div class="container">
+				<div class="row ml-2">
+					<div class="col-lg-3 col-sm-6">
+						<div class="mb-50px-md ">
+							<!-- <h3 class="color-red">Kholod</h3> -->
+							<img class="mb-4" src="./images/Trulyfuture-logo-light.webp">
+							<p class="mb-20px color-aaa">We are your digital transformation house here to evolve your business.</p>
+							<button class="main-btn btn-1" onclick="myFun()">Get Started</button>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="mb-50px-md  links">
+							<h4 class="mb-20px color-fff">Useful Links</h4>
+							<h6 class="mb-15px">
+								<i class="fa fa-angle-right color-red"></i> <a href="./index.html" class="color-ddd color-red-hvr fw-400 transition-3">Home</a>
+							</h6>
+							<h6 class="mb-15px">
+								<i class="fa fa-angle-right color-red"></i> <a href="./about.html" class="color-ddd color-red-hvr fw-400 transition-3">About</a>
+							</h6>
+							<h6 class="mb-15px">
+								<i class="fa fa-angle-right color-red"></i> <a href="./contact.html" class="color-ddd color-red-hvr fw-400 transition-3">Contact</a>
+							</h6>
+							<h6 class="mb-15px">
+								<i class="fa fa-angle-right color-red"></i> <a href="./index.html#pricing" class="color-ddd color-red-hvr fw-400 transition-3">Pricing</a>
+							</h6>
+							<!-- <h6 class="mb-15px">
+								<i class="fa fa-angle-right color-red"></i> <a href="#services" class="color-ddd color-red-hvr fw-400 transition-3">Services</a>
+							</h6> -->
+							<h6 class="mb-15px"">
+								<i class="fa fa-angle-right color-red"></i> <a href="./blogs.html" class="color-ddd color-red-hvr fw-400 transition-3">Blog</a>
+							</h6>
+							<h6 class="mb-15px"">
+								<i class="fa fa-angle-right color-red"></i> <a href="./privacypolicy.html" class="color-ddd color-red-hvr fw-400 transition-3">Privacy Policy</a>
+							</h6>
+							<h6 class="mb-15px"">
+								<i class="fa fa-angle-right color-red"></i> <a href="./terms&conditions.html" class="color-ddd color-red-hvr fw-400 transition-3">Terms & Conditions</a>
+							</h6>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="mb-50px-sm  links">
+							<h4 class="mb-20px color-fff">Services</h4>
+							<h6 class="mb-15px">
+								<i class="fa fa-angle-right color-red"></i> <a href="./logo-design.html" class="color-ddd color-red-hvr fw-400 transition-3">Logo Design</a>
+							</h6>
+							<h6 class="mb-15px">
+								<i class="fa fa-angle-right color-red"></i> <a href="./web-development.html" class="color-ddd color-red-hvr fw-400 transition-3">Web Development</a>
+							</h6>
+							
+							<h6 class="mb-15px">
+								<i class="fa fa-angle-right color-red"></i> <a href="./seo.html" class="color-ddd color-red-hvr fw-400 transition-3">SEO</a>
+							</h6>
+							<h6>
+								<i class="fa fa-angle-right color-red"></i> <a href="./digitalmarketing.html" class="color-ddd color-red-hvr fw-400 transition-3">Digital Marketing</a>
+							</h6>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<h4 class="mb-20px color-fff">Contact Info</h4>
+						<p class="mb-20px color-aaa">Let's Make the Ends Meet!s</p>
+						<h6 class="color-ddd fw-400"><i class="fa fa-map-marker mr-5px fs-15 color-red bg-111 radius-50 address text-center"></i> 24285 Katy Freeway Suite 300-56, Katy, TX 77494</h6>
+						<h6 class="color-ddd fw-400"><i class="fa fa-phone mr-5px fs-15 color-red bg-111 radius-50 address text-center"></i> +00 1 (951) 772-3395</h6>
+						<h6 class="mb-30px color-ddd fw-400"><i class="fa fa-envelope mr-5px fs-15 color-red bg-111 radius-50 address text-center"></i> info@trulyfuture.com</h6>
+						<!-- <a href="#0" class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block"><i class="fa fa-facebook"></i> </a> 
+						<a href="#0" class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block"><i class="fa fa-twitter"></i> </a> 
+						<a href="#0" class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block"><i class="fa fa-linkedin"></i> </a> 
+						<a href="#0" class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block"><i class="fa fa-behance"></i> </a>  -->
+						<a class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block" target="_blank" href="https://www.facebook.com/trulyfuture"><i class="fa fa-facebook"></i> </a>
+						<a class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block" target="_blank" href="https://pk.linkedin.com/company/2-minut-networks"><i class="fa fa-linkedin"></i> </a>
+						<a class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block" target="_blank" href="https://www.instagram.com/truly.future/"><i class="fa fa-instagram"></i> </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	  <!-- ==================================================
+							End footer-area
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							copyright-area
+      ================================================== -->
+	  <section class="footer-padding bg-222 text-center">
+		  <div class="container">
+			  <h6 class="mb-0px color-eee fw-400">Copyright &#169;	2021 All rights reserved | Truly Future by Virtual Bay</h6>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+							End copyright-area
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							scroll-top-btn
+      ================================================== -->
+	  <!-- <div class="scroll-top-btn text-center">
+		  <i class="fa fa-angle-up fs-20 color-fff bg-333 bg-red-hvr radius-50"></i>          
+	  </div> -->
+	  <!-- ==================================================
+							End scroll-top-btn
+      ================================================== -->
+	  
+	  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="js/lity.min.js"></script>
+	<script src="js/scrollIt.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/animated-headline.js"></script>
+	<!--  textillate and typed plugins -->
+	<script src="js/typed.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<script src="js/jquery.lettering.js"></script>
+	<script src="js/jquery.textillate.js"></script>
+	<script src="js/validator.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn-q0VMtMOum5A7HVG86duHeJApbVDv7o"></script>
+  	<script src="js/map.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="./myjavascript.js"></script>
+	  
+	  
+  </body>
+</html>

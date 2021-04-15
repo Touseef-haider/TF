@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Truly Futures | Embrace Your Brands</title>
+	<!-- Favicon -->
+    <link rel="shortcut icon" href="./images/faviconntf.webp" /><!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/et-line-icons.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/animated-headline.css"/>
+	<link rel="stylesheet" href="css/lity.min.css"/>
+    <link rel="stylesheet" href="css/lightbox.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+	<link rel="stylesheet" href="css/green-style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900%7cOpen+Sans:300,400,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Rubik:300,400,500,700,900|Titillium+Web:200,300,400,600,700,900" rel="stylesheet">
+  
+    <style>
+		html{
+			scroll-behavior: smooth;
+		}
+        .list{
+            list-style-type: none;
+            padding: 0%;
+            margin: 0%;
+        }
+		.outer-show{
+			width: 50px;
+			z-index: 999;
+			height: 180px;
+			cursor: pointer;
+			box-shadow: -20px 7px 18px -7px rgba(87, 184, 151, 0.09);
+			border-radius: 0 10px 10px 0;
+			display: inline-block;
+			padding-top: 0;
+			vertical-align: top;
+			/* margin-top: 120px; */
+			position: fixed;
+			text-transform: uppercase;
+			/* background: linear-gradient(to right,magenta, #008080); */
+			background-color: #16c885;
+			left: 0px;
+			right: auto;
+			top: 40%;
+		}
+		.outer-show p {
+			color: #ffffff;
+			font-size: 16px;
+			font-weight: 700;
+			text-transform: uppercase;
+			position: absolute;
+			display: block;
+			transform: rotate(-90deg);
+			-webkit-transition: 0.4s;
+			-moz-transition: 0.4s;
+			-o-transition: 0.4s;
+			transition: 0.4s;
+			left: -38px;
+			text-transform: capitalize;
+			white-space: pre;
+			bottom: 75px;
+		}
+		.divToShow{
+			z-index: 2;
+			display: none;		
+			height: 400px;	
+			transition: height 3s;
+			animation: grow0 0.5s forwards;
+		}
+		.openDiv{
+			position: fixed;
+			top: 30%;
+			transition: left  3s ease;
+		}
+		.banner{
+			width: 100%;
+			/* margin: 0 auto; */
+		}
+		@keyframes grow0 {
+			from {
+				width: 0px;
+			}
+			to {
+				width: 400px;
+			}
+		}
+		@keyframes grow1 {
+			from {
+				width: 0px;
+			}
+			to {
+				width: 250px;
+			}
+		}
+	
+		@media(max-width: 400px){
+			
+			.divToShow{
+				display: none;
+			}
+			.outer-show{
+				display: none;
+			}
+		}
+		.msg-btn{
+			display: none;
+
+		}
+
+		.close-icon{
+			display: none;
+		}
+
+	
+    </style>
+    
+  </head>
+  <body>
+	  <!-- ==================================================
+							load-wrapp
+      ================================================== -->
+	  <div class="load-wrapp">
+		  <div class="wrap">
+			  <ul class="dots-box">
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			  </ul>
+		  </div>
+      </div> 
+	  <!-- ==================================================
+							End load-wrapp
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							navbar
+      ================================================== -->
+	  <nav class="navbar navbar-expand-lg">
+		  <div class="container">
+			  <a class="navbar-brand color-fff color-red-hvr fs-25 fw-600 mr-auto ml-auto" href="./index.html">
+                <img src="./images/Trulyfuture-logo-dark.webp alt="">
+                <span class="bg-red d-inline-block radius-50"></span> 
+			  </a>
+			  <div class="bars z-index-1" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="first d-block bg-fff mb-6px transition-5"></span>
+				  <span class="second d-block bg-fff mb-6px transition-5"></span>
+				  <span class="third d-block bg-fff mb-6px transition-5"></span>
+			  </div>
+			  <div class="collapse navbar-collapse" id="main-navbar">
+				  <ul class="navbar-nav ml-auto">  
+				      <li class="nav-item">
+					  	<a class="nav-link" href="./index.html" >Home</a>
+				  	  </li>
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#pricing">Pricing</a>
+					  </li>
+					  <!-- <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="3">Services</a>
+					  </li>
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="4">Work</a>
+					  </li>
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="5">Blog</a>
+					  </li> -->
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="3">Contact</a>
+					  </li>
+				  </ul>
+				  <ul class="mb-0px pl-30px icons-list">  
+					  <li class="d-inline-block mr-10px">
+					  	<a class="color-fff color-red-hvr" target="_blank"  href="https://www.facebook.com/trulyfuture"><i class="fa fa-facebook"></i> </a>
+					  </li>
+					  <li class="d-inline-block mr-10px">
+					  	<a class="color-fff color-red-hvr"  target="_blank" href="https://www.instagram.com/truly.future/"><i class="fa fa-instagram"></i> </a>
+					  </li>
+					  <li class="d-inline-block mr-10px">
+					  	<a class="color-fff color-red-hvr" target="_blank"  href="https://pk.linkedin.com/company/2-minut-networks"><i class="fa fa-linkedin"></i> </a>
+					  </li>
+				  </ul>
+				  <!-- <ul class="mb-0px pl-30px bars-list">  
+					  <li class="d-inline-block mr-10px">
+					  	<a class="bars-2" href="#">
+							<span class="bar d-block bg-fff first mb-6px"></span>
+							<span class="bar d-block bg-fff second mb-6px"></span>
+							<span class="bar d-block bg-fff third"></span>
+						</a>
+					  </li>
+				  </ul> -->
+			  </div>
+			  <!-- <div class="sidebar-box flex-center text-center pr-30px pl-30px transition-5">
+				  <div class="close-menu p-absolute">
+					  <span class="bar d-block bg-fff first mb-6px"></span>
+					  <span class="bar d-block bg-fff second mb-6px"></span>
+				  </div>
+				  <div>
+                    <img src="./images/Trulyfuture-logo-light (2).webp" alt="">
+
+					  <span class="color-eee fs-15 d-block mb-50px">Creative agency & digital marketing services</span>
+					  <ul class="sidebar-list list-unstyled pl-0px">
+						  <li class="mb-20px">
+							<a class="color-fff color-fff-hvr" href="" data-scroll-nav="1">Home</a>
+						  </li>
+						  <li class="mb-20px">
+							<a class="color-fff color-fff-hvr" href="#" data-scroll-nav="2">About</a>
+						  </li>
+						  <li class="mb-20px">
+							<a class="color-fff color-fff-hvr" href="#" data-scroll-nav="3">Services</a>
+						  </li>
+						  <li class="mb-20px">
+							<a class="color-fff color-fff-hvr" href="#" data-scroll-nav="4">Work</a>
+						  </li>
+						  <li class="mb-20px">
+							<a class="color-fff color-fff-hvr" href="#" data-scroll-nav="5">Blog</a>
+						  </li>
+						  <li>
+							<a class="color-fff color-fff-hvr" href="#" data-scroll-nav="6">Contact</a>
+						  </li>
+					  </ul>
+				  </div>
+				  <div class="icons p-absolute">  
+                        <a class="color-fff color-red-hvr" href="https://www.facebook.com/trulyfuture"><i class="fa fa-facebook"></i> </a>
+                        <a class="color-fff color-red-hvr" href="https://www.instagram.com/truly.future/"><i class="fa fa-instagram"></i> </a>
+                        <a class="color-fff color-red-hvr" href="https://pk.linkedin.com/company/2-minut-networks"><i class="fa fa-linkedin"></i> </a>
+				  </div>
+			  </div> -->
+		  </div>
+	  </nav>
+	  <!-- ==================================================
+							End navbar
+      ================================================== -->
+      <section class="welcome-particles" data-scroll-index="1">
+        <div id="particles-js" class="p-absolute h-100 w-100">
+            <div class="d-flex image-div" >
+				<img src="./images/Trulyfuture-slider-img.webp" style="position: relative; width: 100%; height: 1200px; display: block; background-size: 100% !important; background-repeat: no-repeat imp !important;"/>
+			</div>
+        </div>
+        <div class="flex-center med-padding " >
+            <div class="container"  >
+                <div class="welcome-text " style="margin-top: 50px;">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 mt-5" >	
+							<h2 style="color: #16c885;">Get your Logo & Website here</h2>
+                            <ul class="d-flex flex-column justify-content-end list mt-3">
+                                <li><h4 class="color-fff  list-unstyled">Maximizes your leads</h4></li>
+                                <li><h4 class="color-fff  list-unstyled">Increases your sales</h4></li>
+                                <li><h4 class="color-fff  list-unstyled">Boosts your profits</h4></li></li>
+                              </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+							<form class="form p-3"  id="contact-form" method="post" action="form.php">
+								<div class="messages"></div>
+								<div class="controls">
+									<div class="row"> 
+										<div class="col-md-12">
+											<div class="form-group">
+												<input id="form_name" class="form-control" type="text" name="name" placeholder="Name"  required="required" data-error="Name is required.">
+												<!-- <div class="help-block with-errors color-red"></div> -->
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<input id="form_email" class="form-control" type="email" name="email" placeholder="Email" required="required" data-error="email is required.">
+											<!-- <div class="help-block with-errors color-red"></div> -->
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<input id="form_subject" class="form-control" type="number" name="number" placeholder="Number">
+												<!-- <div class="help-block with-errors"></div> -->
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<textarea id="form_message" class="form-control" name="message" placeholder="Message" rows="6" required="required" data-error="Message."></textarea>
+												<!-- <div class="help-block with-errors color-red"></div> -->
+											</div>
+										</div>
+										<div class="col-md-12">
+											<button role="button" name="submit" class="main-btn btn-3">Send Message </button>
+										</div>
+									</div>
+								</div>
+							</form> 	
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    	<!-- Touseeef's Code -->
+
+
+
+		<!-- here i am going to write a code for call to actions buuttons -->
+		<div class=" divToShow card  bg-light ">
+			<form class="form p-3"  id="contact-form" method="post" action="form.php">
+				<div class="messages"></div>
+				<div class="controls">
+					<div class="row"> 
+						<div class="col-md-12">
+							<div class="form-group">
+								<input id="form_name" class="form-control" type="text" name="name" placeholder="Name"  required="required" data-error="Name is required.">
+								<div class="help-block with-errors color-red"></div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input id="form_email" class="form-control" type="email" name="email" placeholder="Email" required="required" data-error="email is required.">
+							<div class="help-block with-errors color-red"></div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input id="form_subject" class="form-control" type="number" name="number" placeholder="Number">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea id="form_message" class="form-control" name="message" placeholder="Message" rows="6" required="required" data-error="Message."></textarea>
+								<div class="help-block with-errors color-red"></div>
+							</div>
+						</div>
+						<div class="col-md-12 d-flex justify-content-between">							
+							<button role="button" name="submit" class="main-btn btn-3 msg-btn">Send Message </button>
+							<div onclick="closeForm()" style="cursor: pointer;">
+								<i class="fa fa-arrow-left color-red mt-3 mr-3  close-icon"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form> 		
+		</div>
+
+		<div class="outer-show" onclick="myFun()" >
+			<p>Let's Get Started</p>
+		  </div>
+		</div>
+		<script>
+			window.onload = () =>{
+				window.scrollTo(0,0)
+			}
+			var count = 0; 
+			function myFun() {
+				if (count == 0) {
+					
+					var x = window.matchMedia("(max-width: 500px)")
+					if (x.matches) {
+
+						document.querySelector('.divToShow').classList.add('openDiv');
+						document.querySelector('.divToShow').style.width = '250px';
+						document.querySelector('.divToShow').style.animation = 'grow1 0.5s forwards';
+						document.querySelector('.outer-show').style.left = '250px';
+						document.querySelector('.outer-show').style.transition = 'left 1s';
+						document.querySelector('.outer-show').style.zindex = 2;
+						document.querySelector('.divToShow').style.display = 'block';
+						setTimeout(() => {
+							document.querySelector('.msg-btn').style.display='block';
+							document.querySelector('.close-icon').style.display='block';
+
+						}, 500);
+						count = count + 1;
+						
+					} else {
+						document.querySelector('.divToShow').classList.add('openDiv')
+						document.querySelector('.divToShow').style.width = '400px';
+						document.querySelector('.divToShow').style.animation = 'grow0 0.3s forwards'
+						document.querySelector('.outer-show').style.left = '400px';
+						document.querySelector('.outer-show').style.transition = 'left 1s';
+						document.querySelector('.outer-show').style.zindex = 2;
+						document.querySelector('.divToShow').style.display = 'block'
+						setTimeout(() => {
+							document.querySelector('.msg-btn').style.display='block'
+							document.querySelector('.close-icon').style.display='block';
+
+						}, 500);
+						count = count + 1;
+						
+					}
+				}
+				else{
+					count=0
+					document.querySelector('.divToShow').style.display = 'none'
+					document.querySelector('.outer-show').style.left = '0px'
+					document.querySelector('.outer-show').style.transition = 'left 1s'
+					document.querySelector('.msg-btn').style.display='none'
+					document.querySelector('.close-icon').style.display='none';
+				
+				}
+			}
+			function closeForm() {
+				if (count==1) {
+					document.querySelector('.divToShow').style.display = 'none';
+					document.querySelector('.outer-show').style.left = '0px'
+					document.querySelector('.outer-show').style.transition = 'left 1s';
+					document.querySelector('.msg-btn').style.display='none'
+					document.querySelector('.close-icon').style.display='none';
+					count=0
+			}
+		}
+		</script>
+
+
+	<!-- Touseeef's Code  -->
+    
+    
+  <!-- ==================================================
+							price-area
+      ================================================== -->
+	  <section id="pricing" class="price-area bg-f4f4f4 text-center sec-padding">
+		<div class="container">
+			<h6 class="circle-box p-relative color-red text-center fw-300 mb-5px mt-40px">
+				Design Packages
+				<span class="circle-1 p-absolute bg-red radius-3px"></span>
+			</h6>
+			<h1 class="title-h p-relative fw-600 mb-80px">
+				<span class="fw-300">Logo Design</span> Prices
+			</h1>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="price-table mb-50px-sm bg-fff radius-10px p-40px pt-80px pb-80px">
+						<h4 class="fw-500 mb-0px">Standard</h4>
+						<h1 class="mb-15px mt-30px fw-600">100<span class="fw-200 fs-18">$</span></h1>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 4 Logo Concept</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> FREE Grayscale Format</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 100% Satisfaction Guarantee</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 100% Ownership Rights</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 100% Unique Designs</p>
+						<p class="mb-40px"><i class="fa fa-check color-red"></i> 100% MONEY BACK GUARANTEE</p>
+						<a class="main-btn btn-3" target="_blank"  style="display:inline-block  !important" href="./details.html?amount=100">Order</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="price-table mb-50px-sm bg-red radius-10px p-40px pt-80px pb-80px">
+						<h4 class="fw-500 mb-0px color-fff">Premuim</h4>
+						<h1 class="mb-15px mt-30px fw-600 color-fff">150<span class="fw-200 fs-18">$</span></h1>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> 4 Logo Concept</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> Unlimited Revision</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> 6 Dedicated Designers</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> All Final File Formats (AI, EPS, PDF, PSD, JPEG, webp)</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> 48 Hrs Turnaround Time</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> 100% Satisfaction Guarantee</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> 100% Ownership Rights</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> 100% Unique Designs</p>
+						<p class="mb-40px color-eee"><i class="fa fa-check color-fff"></i> 100% MONEY BACK GUARANTEE</p>
+						<a class="main-btn btn-2" target="_blank" href="./details.html?amount=150">Order</a>
+					</div>
+				</div>
+				
+
+
+
+
+				<div class="col-md-4">
+					<div class="price-table bg-fff radius-10px p-40px pt-80px pb-80px">
+						<h4 class="fw-500 mb-0px">Business</h4>
+						<h1 class="mb-15px mt-30px fw-600">300<span class="fw-200 fs-18">$</span></h1>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 6 Logo Concept</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> FREE Icon Design & Colour Options</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> All Final File Formats (AI, EPS, PDF, PSD, JPEG, webp)</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> Turnaround Time 48 - 72 Hours</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> FREE Stationery Design (Invoice, Letterhead, Envelope Etc)</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> Business Card Design</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> Email Signature</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 100% Satisfaction Guarantee</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 100% Ownership Rights</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 100% Unique Designs</p>
+						<p class="mb-40px"><i class="fa fa-check color-red"></i> 100% MONEY BACK GUARANTEE</p>
+						<a class="main-btn btn-3" target="_blank" style="display: inline-block  !important;" href="./details.html?amount=300">Order</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	 <section class="price-area bg-f4f4f4 text-center sec-padding">
+		<div class="container">
+			<h6 class="circle-box p-relative color-red text-center fw-300 mb-5px mt-40px">
+				Development Packages
+				<span class="circle-1 p-absolute bg-red radius-3px"></span>
+			</h6>
+			<h1 class="title-h p-relative fw-600 mb-80px">
+				<span class="fw-300">Web Development</span> Prices
+			</h1>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="price-table mb-50px-sm bg-fff radius-10px p-40px pt-80px pb-80px">
+						<h4 class="fw-500 mb-0px">Standard</h4>
+						<h1 class="mb-15px mt-30px fw-600">299<span class="fw-200 fs-18">$</span></h1>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 3 Pages Customize Website</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 1 Design Concept</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 1 Dedicated Design Team</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> Turn Around 5 Business Days</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 3 Stock Photos</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> W3C Certified HTML</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> Cross Browser Compatible</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> Dedicate Account Manager</p>
+						<p class="mb-40px"><i class="fa fa-check color-red"></i> 24/7 Chat Support </p>
+						<a class="main-btn btn-3" style="display: inline-block !important;" target="_blank" href="./details.html?amount=299">Order</a>
+						
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="price-table mb-50px-sm bg-red radius-10px p-40px pt-80px pb-80px">
+						<h4 class="fw-500 mb-0px color-fff">Premuim</h4>
+						<h1 class="mb-15px mt-30px fw-600 color-fff">449<span class="fw-200 fs-18">$</span></h1>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> 5 Pages Customize Website</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> 1 Design Concept</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> 1 Dedicated Design Team</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> Turn Around 5 Business Days</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> 5 Stock Photos</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> W3C Certified HTML</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> Cross Browser Compatible</p>
+						<p class="mb-10px color-eee"><i class="fa fa-check color-fff"></i> Dedicate Account Manager</p>
+						<p class="mb-40px color-eee"><i class="fa fa-check color-fff"></i> 24/7 Chat Support </p>
+						<a class="main-btn btn-2" style="display: inline-block !important;" target="_blank" href="./details.html?amount=499">Order</a>
+					
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="price-table bg-fff radius-10px p-40px pt-80px pb-80px">
+						<h4 class="fw-500 mb-0px">Business</h4>
+						<h1 class="mb-15px mt-30px fw-600">599<span class="fw-200 fs-18">$</span></h1>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 6 Pages Customize Website</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 1 Design Concept</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 1 Dedicated Design Team</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> Turn Around 5 Business Days</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> 7 Stock Photos</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> W3C Certified HTML</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> Cross Browser Compatible</p>
+						<p class="mb-10px"><i class="fa fa-check color-red"></i> Dedicate Account Manager</p>
+						<p class="mb-40px"><i class="fa fa-check color-red"></i> 24/7 Chat Support </p>
+						<a class="main-btn btn-3" style="display: inline-block !important;" target="_blank" href="./details.html?amount=599">Order</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--  START OF BANNNER  -->
+	<section id="services">
+		<div class="container banner">
+			<img src="./images/banner.webp" alt="Banner"/>
+		</div>
+	</section>
+	<!-- END OF BANNER
+
+
+	<!-- ==================================================
+							brands-area
+      ================================================== -->
+	  <section class="brands-area text-center footer-padding bg-f4f4f4">
+		<div class="container">
+		  <div class="row">
+			  <div class="col-sm-4 col-md-2 mb-50px-sm">
+				  <img alt="brand" src="./images/75DH-logo-Client (1).webp" class="transition-3"> 
+			  </div>
+			  <div class="col-sm-4 col-md-2 mb-50px-sm">
+				  <img alt="brand" src="./images/Arcnarts-logo-Client.webp" class="transition-3"> 
+			  </div>
+			  <div class="col-sm-4 col-md-2 mb-50px-sm">
+				  <img alt="brand" src="./images/Klassico-inks-logo-Client.webp" class="transition-3"> 
+			  </div>
+			  <div class="col-sm-4 col-md-2 mb-50px-xs">
+				  <img alt="brand" src="./images/Luxebyamc-logo-Client.webp" class="transition-3"> 
+			  </div>
+			  <div class="col-sm-4 col-md-2 mb-50px-xs">
+				  <img alt="brand" src="./images/Seklo-logo-Client.webp" class="transition-3"> 
+			  </div>
+			  <div class="col-sm-4 col-md-2 ">
+				  <img alt="brand" src="./images/Vamonos-logo-Client.webp" class="transition-3"> 
+			  </div>
+		 </div>
+	  </div>
+  </section>
+  <!-- ==================================================
+						End brands-area
+  ================================================== -->
+
+  <!-- ==================================================
+							numbers-area
+      ================================================== -->
+	  <section class="numbers-area text-center">
+		<div class="overlay-bg-85 sec-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6">
+						<div class="mb-50px-sm">
+							<i class="icon-pencil  color-red fs-35 radius-50 mb-35px transition-4"></i>
+							<p class="count fs-35 color-fff fw-600 mb-15px mt-10px">12</p>
+							<h5 class="mb-0px color-ddd fw-200">Years of Experience</h5>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="mb-50px-sm">
+							<i class="icon-download color-red fs-35 radius-50 mb-35px transition-4"></i>
+							<p class="count fs-35 color-fff fw-600 mb-15px mt-10px">300</p>
+							<h5 class="mb-0px color-ddd fw-200">Completed Projects</h5>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="mb-50px-xs">
+							<i class="icon-trophy color-red fs-35 radius-50 mb-35px transition-4"></i>
+							<p class="count fs-35 color-fff fw-600 mb-15px mt-10px">100</p>
+							<h5 class="mb-0px color-ddd fw-200">Successful Campaigns</h5>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div>
+							<i class="icon-profile-male color-red fs-35 radius-50 mb-35px transition-4"></i>
+							<p class="count fs-35 color-fff fw-600 mb-15px mt-10px">1000</p>
+							<h5 class="mb-0px color-ddd fw-200">Designs</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ==================================================
+						  End numbers-area
+	================================================== -->
+
+    <!--  -->
+	  <!-- ==================================================
+							contact-area
+      ================================================== -->
+      <section class="contact-area sec-padding text-center" data-scroll-index="3">
+        <div class="container">
+            <h6 class="circle-box p-relative color-red text-center fw-300 mb-5px mt-40px">
+                Get In Touch
+                <span class="circle-1 p-absolute bg-red radius-3px"></span>
+            </h6>
+            <!-- just -->
+            <h1 class="title-h p-relative fw-600 mb-80px"><span class="fw-300">Let's</span> Disscuss <span class="fw-300">How will be the</span> Future Truly</h1>
+            <div class="row mb-50px">
+                <div class="col-md-4">
+                    <!-- this is nothing but the main section of the image -->
+                    <div class="address mb-50px-sm">	
+                        <i class="bg-red bg-222-hvr transition-3 color-fff radius-50 fs-25 mb-10px text-center icon-map"></i>
+                        <p>24285 Katy Freeway Suite 300-56, Katy, TX 77494</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="address mb-50px-sm">	
+                        <i class="bg-red bg-222-hvr transition-3 color-fff radius-50 fs-25 mb-10px text-center icon-phone"></i>
+                        <p>+00 1 (951) 772-3395
+                      </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="address">	
+                        <i class="bg-red bg-222-hvr transition-3 color-fff radius-50 fs-25 mb-10px text-center icon-envelope"></i>
+                        <p>
+                          info@trulyfuture.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-8 offset-md-2">
+                    <div class="contact-form">
+                        <form class="form" id="contact-form" method="post" action="form.php">
+                            <div class="messages"></div>
+                            <div class="controls">
+                                <div class="row"> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input id="form_name" class="form-control" type="text" name="name" placeholder="Name"  required="required" data-error="Name is required.">
+                                            <div class="help-block with-errors color-red"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input id="form_email" class="form-control" type="email" name="email" placeholder="Email" required="required" data-error="email is required.">
+                                        <div class="help-block with-errors color-red"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input id="form_subject" class="form-control" type="number" name="number" placeholder="Number">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea id="form_message" class="form-control" name="message" placeholder="Message" rows="6" required="required" data-error="Message."></textarea>
+                                            <div class="help-block with-errors color-red"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button role="button" name="submit" style="display: block !important;" class="main-btn btn-3">Send Message </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>    
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </section>
+    <!-- ==================================================
+                          End contact-area
+    ================================================== -->
+   
+    <!-- ==================================================
+                          map
+    ================================================== -->
+    <!-- <div id="map">
+    </div> -->
+    <!-- ==================================================
+                          End map
+    ================================================== -->
+  
+    <!-- ==================================================
+                          footer-area
+    ================================================== -->
+    <section class="footer-area" >
+      <div class="overlay-bg-90 sec-padding"> 
+          <div class="container">
+              <div class="row ml-2">
+                  <div class="col-lg-3 col-sm-6">
+                      <div class="mb-50px-md ">
+                          <!-- <h3 class="color-red">Kholod</h3> -->
+                          <img class="mb-4" src="./images/Trulyfuture-logo-dark.webp>
+                          <p class="mb-20px color-aaa">We are your digital transformation house here to evolve your business.</p>
+                          <a class="main-btn btn-1 " onclick="myFun()" href="#0">Get Started</a>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                      <div class="mb-50px-md  links">
+                          <h4 class="mb-20px color-fff">Useful Links</h4>
+                          <h6 class="mb-15px">
+                              <i class="fa fa-angle-right color-red"></i> <a href="./index.html" class="color-ddd color-red-hvr fw-400 transition-3">Home</a>
+                          </h6>
+                          <h6 class="mb-15px">
+                              <i class="fa fa-angle-right color-red"></i> <a href="#pricing" class="color-ddd color-red-hvr fw-400 transition-3">Pricing</a>
+                          </h6>
+                          <!-- <h6 class="mb-15px">
+                              <i class="fa fa-angle-right color-red"></i> <a href="#about" class="color-ddd color-red-hvr fw-400 transition-3">About</a>
+                          </h6> -->
+                          <h6 class="mb-15px">
+                              <i class="fa fa-angle-right color-red"></i> <a href="#services" class="color-ddd color-red-hvr fw-400 transition-3">Services</a>
+                          </h6>
+                          <h6>
+                              <i class="fa fa-angle-right color-red"></i> <a href="#blog" class="color-ddd color-red-hvr fw-400 transition-3">Blog</a>
+                          </h6>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                      <div class="mb-50px-sm  links">
+                          <h4 class="mb-20px color-fff">Services</h4>
+                          <h6 class="mb-15px">
+                              <i class="fa fa-angle-right color-red"></i> <a href="#services" class="color-ddd color-red-hvr fw-400 transition-3">Logo Design</a>
+                          </h6>
+                          <h6 class="mb-15px">
+                              <i class="fa fa-angle-right color-red"></i> <a href="#services" class="color-ddd color-red-hvr fw-400 transition-3">Web Development</a>
+                          </h6>
+                          <h6 class="mb-15px">
+                              <i class="fa fa-angle-right color-red"></i> <a href="#services" class="color-ddd color-red-hvr fw-400 transition-3">Mobile Development</a>
+                          </h6>
+                          <h6 class="mb-15px">
+                              <i class="fa fa-angle-right color-red"></i> <a href="#services" class="color-ddd color-red-hvr fw-400 transition-3">SEO</a>
+                          </h6>
+                          <h6>
+                              <i class="fa fa-angle-right color-red"></i> <a href="#services" class="color-ddd color-red-hvr fw-400 transition-3">Digital Marketing</a>
+                          </h6>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                      <h4 class="mb-20px color-fff">Contact Info</h4>
+                      <p class="mb-20px color-aaa">Let's Make the Ends Meet!s</p>
+                      <h6 class="color-ddd fw-400"><i class="fa fa-map-marker mr-5px fs-15 color-red bg-111 radius-50 address text-center"></i> 24285 Katy Freeway Suite 300-56, Katy, TX 77494</h6>
+                      <h6 class="color-ddd fw-400"><i class="fa fa-phone mr-5px fs-15 color-red bg-111 radius-50 address text-center"></i> +00 1 (951) 772-3395</h6>
+                      <h6 class="mb-30px color-ddd fw-400"><i class="fa fa-envelope mr-5px fs-15 color-red bg-111 radius-50 address text-center"></i> info@trulyfuture.com</h6>
+                      <!-- <a href="#0" class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block"><i class="fa fa-facebook"></i> </a> 
+                      <a href="#0" class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block"><i class="fa fa-twitter"></i> </a> 
+                      <a href="#0" class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block"><i class="fa fa-linkedin"></i> </a> 
+                      <a href="#0" class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block"><i class="fa fa-behance"></i> </a>  -->
+                      <a class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block" target="_blank" href="https://www.facebook.com/trulyfuture"><i class="fa fa-facebook"></i> </a>
+                      <a class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block" target="_blank" href="https://pk.linkedin.com/company/2-minut-networks"><i class="fa fa-linkedin"></i> </a>
+                      <a class="social color-red color-fff-hvr bg-red-hvr bg-111 text-center radius-50 fs-15 d-inline-block" target="_blank" href="https://www.instagram.com/truly.future/"><i class="fa fa-instagram"></i> </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+    <!-- ==================================================
+                          End footer-area
+    ================================================== -->
+    
+    <!-- ==================================================
+                          copyright-area
+    ================================================== -->
+    <section class="footer-padding bg-222 text-center">
+        <div class="container">
+            <h6 class="mb-0px color-eee fw-400">Copyright ©2021 All rights reserved | Truly Future by Virtual Bay</h6>
+        </div>
+    </section>
+    <!-- ==================================================
+                          End copyright-area
+    ================================================== -->
+    
+    <!-- ==================================================
+                          scroll-top-btn
+    ================================================== -->
+    <div class="scroll-top-btn text-center">
+        <i class="fa fa-angle-up fs-20 color-fff bg-333 bg-red-hvr radius-50"></i>          
+    </div>
+    
+       
+	  <!-- ==================================================
+							copyright-area
+      ================================================== -->
+	  <!-- <section class="footer-padding bg-222  text-center">
+		  <div class="container">
+			  <h6 class="mb-0px color-eee fw-400">Copyright ©2021 All rights reserved | Truly Future by Virtual Bay</h6>
+		  </div>
+	  </section> -->
+	  <!-- ==================================================
+							End copyright-area
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							scroll-top-btn
+      ================================================== -->
+	  <div class="scroll-top-btn text-center">
+		  <i class="fa fa-angle-up fs-20 color-fff bg-333 bg-red-hvr radius-50"></i>          
+	  </div>
+	  <!-- ==================================================
+							End scroll-top-btn
+      ================================================== -->
+	  
+	  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<!-- particles.js-->
+    <script src="js/particles.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="js/lity.min.js"></script>
+	<script src="js/scrollIt.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/animated-headline.js"></script>
+	<!--  textillate and typed plugins -->
+	<script src="js/typed.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<script src="js/jquery.lettering.js"></script>
+	<script src="js/jquery.textillate.js"></script>
+	<script src="js/validator.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn-q0VMtMOum5A7HVG86duHeJApbVDv7o"></script>
+  	<script src="js/map.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/wow.min.js"></script>
+	  
+	  
+  </body>
+</html>
