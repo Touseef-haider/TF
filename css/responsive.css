@@ -1,0 +1,106 @@
+/* special media for buttons */
+@media (max-width: 350px) { 
+	.btn-1{padding: 10px 18px;}
+    .btn-2{padding: 10px 18px;}
+    .btn-3{padding: 9px 17px;} 
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+	
+	.mb-50px-xs{margin-bottom: 50px;}
+	
+	.about-area .about-image:before{left: -10px; bottom: -10px;}
+	
+}
+
+/* Medium devices (tablets, 768px and up)  */
+@media (max-width: 767px) {
+	
+	.mb-50px-sm{margin-bottom: 50px;}
+	
+	.mb-25px-sm{margin-bottom: 25px;}
+	
+	.title-h{font-size: 35px; line-height: 38px;}
+
+	.box-padding{padding: 100px 30px;}
+	
+	.title-p{margin: 0 10% 70px 10%;}
+	
+	h1{font-size: 42px; line-height: 42px;}
+	h2{font-size: 33px; line-height: 33px;}
+	h3{font-size: 25px; line-height: 26px;}
+	h4{font-size: 22px; line-height: 24px;}
+	h5{font-size: 18px; line-height: 21px;}
+	h6{font-size: 15px; line-height: 18px;}
+	
+	.navbar{padding: 15px 0;}
+	
+	.navbar-collapse{background-color: #fff; margin-top: 10px;}
+	.navbar-collapse ul{padding-top: 10px;}
+	
+	.navbar .navbar-nav .nav-link{color: #333; text-align: center;}
+	
+	.welcome-area .welcome-text p{margin: 0 10%;}
+	
+	.image-back-right,
+	.image-back-left{
+		position: relative; 
+		top: 0; 
+		left: 0; 
+		height: 400px;
+	}
+	
+	.process-area .box:after{content: none;}
+	
+	.testimonials .single-review p{
+		line-height: 1.5em;
+		margin: 0 10%;
+	}
+}
+/* my css for padding of the home button */
+@media (max-width: 991px){
+div#main-navbar {
+    padding-top: 10px;
+}
+
+/* Large devices (desktops, 992px and up)  */
+@media (max-width: 991px) {	
+	
+	.mb-50px-md{margin-bottom: 50px;}
+	
+	.mb-25px-md{margin-bottom: 25px;}
+	
+	.mb-30px-md{margin-bottom: 30px;}
+	
+	.navbar-expand-lg .container{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+	.navbar{padding: 15px 0;}
+	
+	.navbar-collapse{background-color: #fff; margin-top: 10px;}
+	
+	.navbar .navbar-nav .nav-link{color: #333; text-align: center;}
+	
+	.navbar .bars{display: block;}
+	
+	.navbar .bars-list,
+	.navbar .icons-list,
+	.sidebar-box{display: none;}
+	
+	.image-back-right,
+	.image-back-left,
+	.image-back-center{
+		position: relative;
+		height: 400px;
+		left: 0;
+		width: 100%;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up)  */
+@media (max-width: 1200px) { 
+}
